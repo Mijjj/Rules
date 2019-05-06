@@ -5,7 +5,7 @@
 进行了以下部分的修改：
 - 将短链接展开
 - 添加 Twitch、Telegram、Final 的策略组
-- 精简了 Media（Streaming）策略组，具体的支持列表请自行查看：https://git.io/fjOXK
+- 精简了 Media（Streaming）策略组，具体的支持列表请自行查看：https://git.io/fjYwe
 - Teamviewer、LAN 默认不走代理
 - BBC 固定使用 Britain（英国）节点
 - 区域 Auto 规则的一些修改
