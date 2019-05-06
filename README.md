@@ -10,6 +10,7 @@
 - BBC 固定使用 Britain（英国）节点
 - 区域 Auto 规则的一些修改
 - Taiwan 节点默认使用中国国旗
+- 修改详情请查看历史记录，勿以此为准
 
 
 部分规则引用自 JO2EY、ConnersHua 及 LHIE1，感谢！
