@@ -1,4 +1,4 @@
-此模板修改自 JO2EY 的 surge2clash 模板（https://raw.githubusercontent.com/JO2EY/Rules/master/Clash/Surge2Clash.conf）
+此模板修改自 JO2EY 的 [surge2clash 模板](https://raw.githubusercontent.com/JO2EY/Rules/master/Clash/Surge2Clash.conf)
 感谢 JO2EY！
 
 
