@@ -1,16 +1,16 @@
 # 收集自UsbEAm，有出入
 # 商店api
-store.steampowered.com
-api.steampowered.com
+DOMAIN-SUFFIX,store.steampowered.com
+DOMAIN-SUFFIX,api.steampowered.com
 # 好友列表加载
-steam-chat.com
+DOMAIN-SUFFIX,steam-chat.com
 # 图片
-steamstore-a.akamaihd.net
-steamusercontent-a.akamaihd.net
-steamcommunity-a.akamaihd.net
-steamcdn-a.akamaihd.net
-steamuserimages-a.akamaihd.net
+DOMAIN-SUFFIX,steamstore-a.akamaihd.net
+DOMAIN-SUFFIX,steamusercontent-a.akamaihd.net
+DOMAIN-SUFFIX,steamcommunity-a.akamaihd.net
+DOMAIN-SUFFIX,steamcdn-a.akamaihd.net
+DOMAIN-SUFFIX,steamuserimages-a.akamaihd.net
 # 直播
-steambroadcast.akamaized.net
+DOMAIN-SUFFIX,steambroadcast.akamaized.net
 # 下载/直播/图片
-*.steamcontent.com
+DOMAIN-SUFFIX,*.steamcontent.com
