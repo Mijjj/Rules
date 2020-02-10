@@ -13,4 +13,4 @@ DOMAIN-SUFFIX,steamuserimages-a.akamaihd.net
 # 直播
 DOMAIN-SUFFIX,steambroadcast.akamaized.net
 # 下载/直播/图片
-DOMAIN-SUFFIX,*.steamcontent.com
+DOMAIN-SUFFIX,steamcontent.com
