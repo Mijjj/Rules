@@ -29,7 +29,7 @@ experimental:
 
 dns:
   enable: true
-  ipv6: false
+  ipv6: true
   listen: 0.0.0.0:53
   enhanced-mode: fake-ip # or redir-host
   fake-ip-range: 198.18.0.1/16 # if you don't know what it is, don't change it
