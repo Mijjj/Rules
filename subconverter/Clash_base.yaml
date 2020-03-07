@@ -41,8 +41,6 @@ dns:
     #教育网
     #- 58.200.168.2
     - tls://dns.rubyfish.cn:853 # dns over tls
-    - tls://dns.google
-    - 192.168.10.10
 # 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。
   fallback:
     - tls://dns.rubyfish.cn:853 # dns over tls
