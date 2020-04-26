@@ -1,0 +1,10 @@
+#!name=crack sleepzy
+#!desc=crack sleepzy
+#!system=ios
+
+[MITM]
+hostname = %INSERT% subs.platforms.team
+
+[Script]
+# crack sleepzy
+http-response ^https:\/\/subs\.platforms\.team\/apple\/verifyTransaction$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/productive.js,script-update-interval=0
