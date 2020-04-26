@@ -5,4 +5,4 @@ https://raw.githubusercontent.com/hotkids/Rules/master/subconverter/Config.ini
 https://github.com/tindy2013/subconverter
 
 API（由DlerCloud提供）：
-https://api.dler.io
+https://sub.dler.io/
