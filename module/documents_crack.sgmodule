@@ -1,6 +1,11 @@
 #!name=documents,pdfexpert crack
 #!desc=documents,pdfexpert crack
 #!system=ios
+
+[MITM]
+hostname = %APPEND% license.pdfexpert.com
+
+[Script]
 # crack documents,pdfexpert
 http-response ^https?:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/documents.js
 http-response ^https?:\/\/license\.pdfexpert\.com\/api\/1\.0\/pdfexpert6\/subscription\/(refresh$|check$) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Pdfexpert.vip.js
