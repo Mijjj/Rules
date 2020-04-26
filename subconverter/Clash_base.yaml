@@ -47,7 +47,7 @@ dns:
     - https://dns.233py.com/dns-query
     - https://i.233py.com/dns-query
     - https://1.1.1.1/dns-query # dns over https
-    - tls://dns.google
+    # - tls://dns.google
   fallback-filter:
     geoip: true # default
     ipcidr: # ips in these subnets will be considered polluted
