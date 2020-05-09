@@ -20,19 +20,12 @@ log-level: info
 # clash 的 RESTful API
 external-controller: 127.0.0.1:9090
 
-# experimental feature
-experimental:
-  ignore-resolve-fail: true # ignore dns resolve fail, default value is true
-
 # RESTful API 的口令 (可选)
 #secret: ""
-
 dns:
   enable: true
-  ipv6: true
   listen: 0.0.0.0:53
-  enhanced-mode: fake-ip # or redir-host
-  fake-ip-range: 198.18.0.1/16 # if you don't know what it is, don't change it
+  enhanced-mode: redir-host
   nameserver:
     - 114.114.114.114
     - 119.29.29.29
@@ -41,17 +34,16 @@ dns:
     - 202.96.134.133
     #教育网
     #- 58.200.168.2
-    - https://i.233py.com/dns-query
+    #- https://i.233py.com/dns-query
 # 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。
   fallback:
-    - https://dns.233py.com/dns-query
-    - https://i.233py.com/dns-query
+    #- https://dns.233py.com/dns-query
+    #- https://i.233py.com/dns-query
     - https://1.1.1.1/dns-query # dns over https
     # - tls://dns.google
-  fake-ip-filter:
-    - 'dns.msftncsi.com'
-    - 'www.msftncsi.com'
-    - 'www.msftconnecttest.com'
+experimental:
+  interface-name: en0 # your interface-name
+
 # clash DNS 请求逻辑：
 # (1) 当访问一个域名时，nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
 # (2) clash 将选取 nameserver 列表内，解析最快的结果。
