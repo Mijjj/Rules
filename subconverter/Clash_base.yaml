@@ -42,11 +42,11 @@ dns:
     - https://1.1.1.1/dns-query # dns over https
     - https://9.9.9.9:5053/dns-query
     # - tls://dns.google
-experimental:
+#experimental:
 # your interface-name
-  interface-name: WLAN # or en0
+#  interface-name: WLAN # or en0
 tun:
-  enable: true
+  enable: false
 # clash DNS 请求逻辑：
 # (1) 当访问一个域名时，nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
 # (2) clash 将选取 nameserver 列表内，解析最快的结果。
