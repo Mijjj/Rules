@@ -1,0 +1,10 @@
+#!name=腾讯视频签到
+#!desc=腾讯视频（网页+App）签到
+#!system=ios
+
+[MITM]
+hostname = %APPEND% *.video.qq.com
+
+[Script]
+http-request ^https:\/\/access.video.qq.com\/user\/auth_refresh script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.cookie.js
+cron "0 9 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js
