@@ -1,5 +1,5 @@
 #!name=Remove Bilibili Ads
-#!desc=移除 Bilibili iOS App 上的扰人广告 (Source: https://github.com/onewayticket255/)
+#!desc=移除 Bilibili iOS App 上的扰人广告 (https://github.com/rixCloud-Inc/rixCloud-Surge3_Rules/blob/master/remove_bilibili_ads.sgmodule)
 #!system=ios
 
 [Script]
