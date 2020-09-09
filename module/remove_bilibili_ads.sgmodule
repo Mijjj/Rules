@@ -1,0 +1,12 @@
+#!name=Remove Bilibili Ads
+#!desc=移除 Bilibili iOS App 上的扰人广告 (Source: https://github.com/onewayticket255/)
+#!system=ios
+
+[Script]
+Bilibili Space = type=http-response,requires-body=1,max-size=0,pattern=https://ruleset.dev/bilibili_space,script-update-interval=86400
+Bilibili Tab = type=http-response,requires-body=1,max-size=0,pattern=https://app.bilibili.com/x/resource/show/tab\?access_key,script-path=https://ruleset.dev/bilibili_tab,script-update-interval=86400
+Bilibili Feed = type=http-response,requires-body=1,max-size=0,pattern=https://app.bilibili.com/x/v2/feed/index\?access_key,script-path=https://ruleset.dev/bilibili_tab,script-update-interval=86400
+#Bilibili Account = type=http-response,requires-body=1,max-size=0,pattern=https://app.bilibili.com/x/v2/account/mine\?access_key,script-path=https://ruleset.dev/bilibili_feed,script-update-interval=86400
+Bilibili View = type=http-response,requires-body=1,max-size=0,pattern=https://app.bilibili.com/x/v2/view\?access_key,script-path=https://ruleset.dev/bilibili_account,script-update-interval=86400
+Bilibili Reply = type=http-response,requires-body=1,max-size=0,pattern=https://api.bilibili.com/x/v2/reply/main\?access_key,script-path=https://ruleset.dev/bilibili_relate,script-update-interval=86400
+Bilibili Live = type=http-response,requires-body=1,max-size=0,pattern=https://api.live.bilibili.com/xlive/app-room/v1/index/getInfoByRoom\?access_key,script-path=https://ruleset.dev/bilibili_live,script-update-interval=86400
