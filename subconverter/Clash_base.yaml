@@ -35,10 +35,10 @@ dns:
 
 
 # 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。
-#  fallback:
-#    - https://dns.233py.com/dns-query
-#    - https://i.233py.com/dns-query
-#    - https://1.1.1.1/dns-query # dns over https
+  fallback:
+    - https://dns.233py.com/dns-query
+    - https://i.233py.com/dns-query
+    - https://rubyfish.cn/dns-query # dns over https
 #    - https://9.9.9.9:5053/dns-query
 #    - tls://dns.google
 #experimental:
