@@ -1,5 +1,5 @@
-# HTTP/SOCKS5 代理端口
-port: 7890
+# HTTP/SOCKS5 混合代理端口
+mixed-port: 7890
 
 # SOCKS5 代理端口
 #socks-port: 7891
@@ -36,16 +36,15 @@ dns:
 
 # 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。
   fallback:
-    - https://dns.233py.com/dns-query
     - https://i.233py.com/dns-query
-    - https://rubyfish.cn/dns-query # dns over https
-#    - https://9.9.9.9:5053/dns-query
-#    - tls://dns.google
+    - https://9.9.9.9:5053/dns-query
+    - tls://dns.google
+    - 1.2.4.8
 #experimental:
 # your interface-name
 #  interface-name: WLAN # or en0
-tun:
-  enable: false
+#tun:
+#  enable: false
 # clash DNS 请求逻辑：
 # (1) 当访问一个域名时，nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
 # (2) clash 将选取 nameserver 列表内，解析最快的结果。
