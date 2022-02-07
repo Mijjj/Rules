@@ -31,12 +31,10 @@ dns:
     - 202.96.128.86
     - 119.29.29.29
     - 223.5.5.5
-    - 1.2.4.8
 
 
 # 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。
   fallback:
-    #- https://i.233py.com/dns-query
     - tls://dh-dns.global-idc.net:853
     - https://dh-dns.global-idc.net/dns-query
     - https://1.1.1.1/dns-query
@@ -50,6 +48,26 @@ dns:
 # (2) clash 将选取 nameserver 列表内，解析最快的结果。
 # (3) 若解析结果中，IP 地址属于国外，那么 clash 将选择 fallback 列表内，解析最快的结果。
 
+
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    domain:
+      - '+.google.com'
+      - '+.facebook.com'
+      - '+.youtube.com'
+      - '+.instagram.com'
+      - '+.twitter.com'
+      - '+.bbc.com'
+      - '+.wikipedia.org'
+      - '+.twitch.tv'
+      - '+.pornhub.com'
+      - '+.amazon.com'
+   nameserver-policy:
+     '+.baidu.com': '114.114.114.114'
+     '+.qq.com': '119.29.29.29'
+     '+.jd.com': '119.29.29.29'
+     '+.taobao.com': '223.5.5.5'
 cfw-bypass:
   # 直连列表
   # MyList
