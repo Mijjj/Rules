@@ -28,17 +28,16 @@ dns:
   enhanced-mode: redir-host
   nameserver:
     #广州电信
-    - 202.96.128.86
+    #- 202.96.128.86
     - 119.29.29.29
     - 223.5.5.5
-
+    - 114.114.114.114
 
 # 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。
   fallback:
-    - https://a.passcloud.xyz/dns-query
     - https://1.1.1.1/dns-query
-    - https://a.passcloud.xyz/cdn
-    - https://worldwide.passcloud.xyz/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
 #experimental:
 # your interface-name
 #  interface-name: WLAN # or en0
