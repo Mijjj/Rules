@@ -1,8 +1,6 @@
-# 雷神加速器
-USER-AGENT,Leigod
-# Documents 内网传输
+# Documents
 DOMAIN,docstransfer.com
-#steam下载
+# steam
 DOMAIN-SUFFIX,steampipe.steamcontent.tnkjmec.com
 DOMAIN-SUFFIX,steampipe.akamaidh.net
 DOMAIN-SUFFIX,steamcdn-a.akamaidh.net
