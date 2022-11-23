@@ -2,3 +2,7 @@
 USER-AGENT,Leigod
 # Documents 内网传输
 DOMAIN,docstransfer.com
+#steam下载
+DOMAIN-SUFFIX,steampipe.steamcontent.tnkjmec.com
+DOMAIN-SUFFIX,steampipe.akamaidh.net
+DOMAIN-SUFFIX,steamcdn-a.akamaidh.net
