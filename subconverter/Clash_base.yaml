@@ -24,29 +24,151 @@ external-controller: 127.0.0.1:9090
 #secret: ""
 dns:
   enable: true
-  listen: 0.0.0.0:53
-  enhanced-mode: redir-host
-  nameserver:
-    #广州电信
-    #- 202.96.128.86
-    - 119.29.29.29
+  listen: 127.0.0.1:8853
+  default-nameserver:
     - 223.5.5.5
-    - 114.114.114.114
-
-# 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。
+    - 119.29.29.29
+	- 114.114.114.114
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-filter:
+    - "*.lan"
+    - stun.*.*.*
+    - stun.*.*
+    - time.windows.com
+    - time.nist.gov
+    - time.apple.com
+    - time.asia.apple.com
+    - "*.ntp.org.cn"
+    - "*.openwrt.pool.ntp.org"
+    - time1.cloud.tencent.com
+    - time.ustc.edu.cn
+    - pool.ntp.org
+    - ntp.ubuntu.com
+    - ntp.aliyun.com
+    - ntp1.aliyun.com
+    - ntp2.aliyun.com
+    - ntp3.aliyun.com
+    - ntp4.aliyun.com
+    - ntp5.aliyun.com
+    - ntp6.aliyun.com
+    - ntp7.aliyun.com
+    - time1.aliyun.com
+    - time2.aliyun.com
+    - time3.aliyun.com
+    - time4.aliyun.com
+    - time5.aliyun.com
+    - time6.aliyun.com
+    - time7.aliyun.com
+    - "*.time.edu.cn"
+    - time1.apple.com
+    - time2.apple.com
+    - time3.apple.com
+    - time4.apple.com
+    - time5.apple.com
+    - time6.apple.com
+    - time7.apple.com
+    - time1.google.com
+    - time2.google.com
+    - time3.google.com
+    - time4.google.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - localhost.ptlogin2.qq.com
+    - "*.*.*.srv.nintendo.net"
+    - "*.*.stun.playstation.net"
+    - xbox.*.*.microsoft.com
+    - "*.ipv6.microsoft.com"
+    - "*.*.xboxlive.com"
+    - speedtest.cros.wr.pvp.net
+	# Bilibili CDN
+    - '*.mcdn.bilivideo.cn'
+    # Windows Default LAN WorkGroup
+    - 'WORKGROUP'
+	# Google Voices
+    - 'lens.l.google.com'
+    # PlayStation STUN
+    - '+.stun.playstation.net'
+  nameserver:
+    - 119.29.29.29
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    - https://rubyfish.cn/dns-query
   fallback:
-    - https://1.1.1.1/dns-query
-    - https://cloudflare-dns.com/dns-query
-    - https://dns.google/dns-query
-#experimental:
-# your interface-name
-#  interface-name: WLAN # or en0
-#tun:
-#  enable: false
-# clash DNS 请求逻辑：
-# (1) 当访问一个域名时，nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
-# (2) clash 将选取 nameserver 列表内，解析最快的结果。
-# (3) 若解析结果中，IP 地址属于国外，那么 clash 将选择 fallback 列表内，解析最快的结果。
+    - https://dns.rubyfish.cn/dns-query
+    - https://public.dns.iij.jp/dns-query
+    - https://dns.cloudflare.com/dns-query
+    - tls://8.8.4.4
+    - https://jp.tiar.app/dns-query
+    - https://jp.tiarap.org/dns-query
+  fallback-filter:
+    geoip: true
+	geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+      - 127.0.0.1/32
+    domain:
+      - '+.google.+'
+      - '+.googleapis.com'
+      - '+.googlevideo.com'
+      - '+.gstatic.cn'
+      - '+.gstatic.com'
+      - '+.gvt1.com'
+      - '+.gvt2.com'
+      - '+.recaptcha.net'
+      - '+.twimg.com'
+      - '+.twitter.com'
+      - '+.youtube.com'
+      - '+.ytimg.com'
+      - 'twitter.com'
+      - 't.co'
+      - 't.me'
+      - 'telegra.ph'
+      - 'youtu.be'
+  nameserver-policy:
+    # Alibaba
+    '*.alibaba.cn': '223.5.5.5'
+    '*.alibaba.com.cn': '223.5.5.5'
+    '*.china.alibaba.com': '223.5.5.5'
+    '*.1688.com': '223.5.5.5'
+    '*.taobao.com': '223.5.5.5'
+    '*.tbcache.com': '223.5.5.5'
+    '*.tmall.com': '223.5.5.5'
+    '*.alicdn.com': '223.5.5.5'
+    '*.aliyundrive.com': '223.5.5.5'
+    '*.aliyun.*': '223.5.5.5'
+    '*.aliyuncdn.*': '223.5.5.5'
+    '*.aliyunddos????.com': '223.5.5.5'
+    '*.aliyuncs.com': '223.5.5.5'
+    '*.aliyundunwaf.com': '223.5.5.5'
+    '*.aliapp.com': '223.5.5.5'
+    '*.aliapp.org': '223.5.5.5'
+    '*.alibabausercontent.com': '223.5.5.5'
+    '*.mmstat.com': '223.5.5.5'
+    'tb.cn': '223.5.5.5'
 
 
 
