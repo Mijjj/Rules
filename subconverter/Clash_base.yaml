@@ -111,9 +111,11 @@ dns:
 
 # 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。
   fallback:
-    - https://1.1.1.1/dns-query
+    - https://1dot1dot1dot1.cloudflare-dns.com
     - https://cloudflare-dns.com/dns-query
-    - https://dns.google/dns-query
+    - https://8.8.8.8/dns-query
+    - https://doh.dns.sb/dns-query
+    - https://rubyfish.cn/dns-query
 #experimental:
 # your interface-name
 #  interface-name: WLAN # or en0
