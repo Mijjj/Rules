@@ -1,3 +1,7 @@
+
+#LAN
+RULE-SET,LAN
+
 # Documents
 DOMAIN,docstransfer.com
 # steam
