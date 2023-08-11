@@ -1,6 +1,6 @@
 
 #LAN
-RULE-SET,LAN
+#RULE-SET,LAN
 
 # Documents
 DOMAIN,docstransfer.com
