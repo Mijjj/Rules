@@ -108,8 +108,8 @@ dns:
     - 119.29.29.29
     - 223.5.5.5
     - 223.6.6.6
-    - https://dns.ipv6dns.com/dns-query
     - dhcp://en0
+    - [2400:3200::1]:53
 
 # 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。
   fallback:
@@ -117,7 +117,7 @@ dns:
     - https://cloudflare-dns.com/dns-query
     - https://223.5.5.5/dns-query
     - https://8.8.8.8/dns-query
-    - https://dns.ipv6dns.com/dns-query
+
 #experimental:
 # your interface-name
 #  interface-name: WLAN # or en0
